@@ -1,21 +1,23 @@
-// Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Your Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: "apps-e02e4.firebaseapp.com",
-  databaseURL: "https://apps-e02e4-default-rtdb.firebaseio.com",
-  projectId: "apps-e02e4",
-  storageBucket: "apps-e02e4.appspot.com",
-  messagingSenderId: "931728242416",
-  appId: "1:931728242416:web:413bcf5fe9d40eef293435",
-  measurementId: "G-JD421BHN8R"
+  apiKey: "AIzaSyAgHfG6PaMY_xBC0LqmPtaKzRcD9x939_c",
+  authDomain: "church-scheduler-cce33.firebaseapp.com",
+  projectId: "church-scheduler-cce33",
+  storageBucket: "church-scheduler-cce33.appspot.com",
+  messagingSenderId: "18255551992",
+  appId: "1:18255551992:web:1426286df413ac4aefca0d",
+  measurementId: "G-1XB1S96K2T"
 };
 
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+// Initialize Firebase app
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Analytics (optional, if you're using it)
+const analytics = getAnalytics(app);
+
+// Export the initialized app and analytics if needed elsewhere
+export { app, analytics };
